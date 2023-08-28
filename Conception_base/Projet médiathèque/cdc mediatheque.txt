@@ -1,0 +1,16 @@
+La mediatheque propose en prêt des media (type de media livre, video, jeu, musique)
+durée de prêt : 30 jours
+
+Media(titre, description, nb_pages, duree, auteur(1 à n), editeur(entité ?, infos completes), ISBN)
+Exemplaire(un exemplaire identifié d'un média, possède un état (liste de valeurs ou entité), dispo, emplacement)
+prets(un exemplaire, un usager, date emprunt, date retour, caution)
+usagers(nom prenom, tel, mail , adresse, cp, ville, date naissance, date inscription, parent (id usager)
+
+Un usager emprunte un exemplaire: il s'identifie avec le code barre sur sa carte ou il faut le recherches avec des critères de l'entité usager ou avec le dernier livre emprunté
+il faut identifier le livre par son identifiant (optique ou non) ou son ISBN
+mettre à jour l'état
+enregistrer le pret, indiquer non dispo sur l'exemplaire
+
+un usager ramene un exemplaire : on identifie l'exemplaire et indiquer dispo sur l'exemplaire
+
+Statistique d'emprunt par media et par exemplaire, par usager
