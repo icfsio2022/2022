@@ -6,7 +6,7 @@ USE blog;
 CREATE TABLE Article(
    id INT,
    auteur VARCHAR(70),
-   date_ DATETIME,
+   date DATETIME,
    titre VARCHAR(100) NOT NULL,
    contenu TEXT NOT NULL,
    PRIMARY KEY(id_article)
@@ -14,7 +14,7 @@ CREATE TABLE Article(
 
 CREATE TABLE Commentaire(
    id INT,
-   date_commentaire DATETIME,
+   date DATETIME,
    auteur VARCHAR(70) NOT NULL,
    contenu TEXT NOT NULL,
    id_article INT NOT NULL,
