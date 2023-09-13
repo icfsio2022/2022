@@ -1,0 +1,13 @@
+1. Ajouter un champ total_prets dans "exemplaire"
+2. Ajouter un trigger de màj du total_pret (sur ajout, modif et suppression dans pret)
+
+```sql
+CREATE TRIGGER insert_exemplaire
+    AFTER INSERT OR UPDATE ON pret
+    FOR STATEMENT
+BEGIN
+    Declare nb INTEGER;
+    SELECT count(id_exemplaire) INTO nb FROM pret WHERE id_exemplaire = new.id_exemplaire;
+    UPDATE exemplaire SET total_prets = nb WHERE id_exemplaire = new.id_exemplaire;
+ END;
+```
